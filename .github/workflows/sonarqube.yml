@@ -17,14 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
@@ -35,4 +27,4 @@ jobs:
             -Dsonar.projectKey=Lab9-ssd
             -Dsonar.projectName=Lab9-ssd
             -Dsonar.sources=.
-            -Dsonar.exclusions=**/node_modules/**
+            -Dsonar.exclusions=**/node_modules/**,**/.git/**
