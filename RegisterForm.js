@@ -111,7 +111,7 @@ const RegisterForm = () => {
 
     // Enforce max length
     if (value.length > 64) {
-      setError("Password must be 64 characters or fewer.");
+      setError("HelloWorld");
       return;
     }
 
